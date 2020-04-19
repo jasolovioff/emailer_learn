@@ -4,7 +4,9 @@ const keys = require('./config/keys');
 require('./models/User')
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI2, {
+    useNewUrlParser: true
+});
 
 const app = express();
 
